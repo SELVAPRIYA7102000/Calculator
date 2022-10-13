@@ -1,0 +1,54 @@
+﻿@model Calculator.Models.Calc
+@{
+    ViewBag.Title = "Index";
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <link  rel="stylesheet" href="~/Content1/Style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("Button").click(function () {
+                var intNumber = $(this).text();
+                
+                $("#Txtnum").val($("#Txtnum").val() + intNumber);
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>CALCULATOR</h2>
+    <div class="DivMain">
+        <form action="Index" method="post">
+
+            <input type="text" name="num1" id="Txtnum" value="@Model.num1" /> <br/>
+
+            <input type="text" name="num2" id="num2" value="@Model.num2" /><br />
+
+            
+           
+            <input type="submit" name="Op" value="+" />
+            <input type="submit" name="Op" value="-" />
+            <input type="submit" name="Op" value="*" />
+            <input type="submit" name="Op" value="/" />
+            <input type="submit" name="Op" value="C"/>
+         
+
+        </form>
+        <button> 1</button>
+        <button> 2</button>
+        <button> 3</button>
+        <button> 4</button> <br />
+        <button> 5</button>
+        <button> 6</button>
+        <button> 7</button>
+        <button> 8</button> <br/>
+        <button> 9</button>
+        <button> 0</button> <br />
+       
+    </div>
+</body>
+</html>
+
